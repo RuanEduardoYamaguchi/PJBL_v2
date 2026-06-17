@@ -1,23 +1,24 @@
 def escolher_dificuldade():
-                                   #Laço de repetição para garantir que o usuário só vai sair dessa tela CASO escolha uma dificuldade válida
-    print('Escolha o modo do jogo')
-    print('1 - Fácil')
-    print('2 - Normal')
-    print('3 - Difícil')
 
-    opcao = int(input('Digite 1, 2 ou 3: '))
+    while True:
 
-    if opcao == 1:
-        return 'facil'
-            
-    elif opcao == 2:
-        return 'normal'
-            
-    elif opcao == 3:
-        return 'dificil'
-            
-    else:
-        print('Opção inválida! Tente novamente.\n')
+        print('Escolha o modo do jogo')
+        print('1 - Fácil')
+        print('2 - Normal')
+        print('3 - Difícil')
+
+        opcao = input('Digite 1, 2 ou 3: ')
+
+        if opcao == '1':
+            return 'facil'
+
+        elif opcao == '2':
+            return 'normal'
+
+        elif opcao == '3':
+            return 'dificil'
+
+        print('Opção inválida!')
     
 
 
