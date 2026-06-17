@@ -17,7 +17,7 @@ tesourosEncontrados = 0
 while True:
 
     exibir_mapa(labirinto)
-    
+
     print(f'Pontuação: {pontuacao}')
     print(f'Tesouros: {tesourosEncontrados}/{maxTesouros}')
 
@@ -64,3 +64,9 @@ while True:
 
     else:
         print ("Movimento inválido") #Se a nova posição for uma '#'
+
+nome = input("Digite seu nome: ")  #para por no ranking
+
+with open("ranking.txt", "a") as arquivo:     #WITH - Faz com que a pasta seja fechada após sair da identação
+    arquivo.write(f"{nome} - {pontuacao}\n")  #"a" - É um "append", adiciona na pasta "ranking.txt"
+                                              #"as" arquivo" cria uma variável chamada arquivo
