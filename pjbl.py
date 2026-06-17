@@ -17,6 +17,9 @@ tesourosEncontrados = 0
 while True:
 
     exibir_mapa(labirinto)
+    
+    print(f'Pontuação: {pontuacao}')
+    print(f'Tesouros: {tesourosEncontrados}/{maxTesouros}')
 
     direcao = input('W A S D: ').lower()
 
@@ -42,6 +45,7 @@ while True:
         if labirinto[nova_linha][nova_coluna] == 'A':
 
             pontuacao -= 25
+            labirinto[nova_linha][nova_coluna] = '.'
 
         labirinto[linha_jogador][coluna_jogador] = '.'
 
